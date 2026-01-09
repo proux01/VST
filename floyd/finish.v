@@ -176,7 +176,7 @@ Ltac inst_EX :=
 
 Ltac2 simpl_entailer_goal () := Control.enter (fun () =>
   repeat (first
-  [ progress ltac1:(Intros *); fin_log "Intros *."
+  [ progress ltac1:(Intros * ); fin_log "Intros *."
   | progress (simpl_safe ()); fin_log "simpl_safe."
   | progress (subst_decisives ()); fin_log "subst_decisives."
   | progress ltac1:(finish_pre_solve_simpl)

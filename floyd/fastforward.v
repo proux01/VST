@@ -24,7 +24,7 @@ Ltac fastforward_semax_post_simpl := idtac.
 (* Performs a "single-step" for fastforward *)
 Ltac2 fastforward_ss () :=
   first
-  [ progress ltac1:(Intros *); ff_log "Intros *."
+  [ progress ltac1:(Intros * ); ff_log "Intros *."
   | progress (ltac1:(simpl_implicit)); ff_log "simpl_implicit."
   | progress ltac1:(fold_Vbyte); ff_log "fold_Vbyte"
   | progress ltac1:(fastforward_semax_pre_simpl)
@@ -40,7 +40,7 @@ Ltac2 fastforward_ss () :=
 
 Ltac2 fastforward_ss' () :=
   first
-  [ progress ltac1:(Intros *); ff_log "Intros *."
+  [ progress ltac1:(Intros * ); ff_log "Intros *."
   | progress ltac1:(simpl_implicit); ff_log "simpl_implicit."
   | progress ltac1:(fold_Vbyte); ff_log "fold_Vbyte"
   | progress ltac1:(fastforward_semax_pre_simpl)
